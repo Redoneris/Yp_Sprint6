@@ -21,15 +21,15 @@ func AutoDetect(input string) (string, error) {
 
 func isMorseCode(s string) bool {
 
-	allowedChars := ".- /"
+	//	allowedChars := ".- /"
 
-	for _, char := range s {
+	//	for _, char := range s {
 
-		if !strings.ContainsRune(allowedChars, char) &&
-			char != ' ' && char != '\n' && char != '\r' && char != '\t' {
-			return false
-		}
-	}
+	//		if !strings.ContainsRune(allowedChars, char) &&
+	//			char != ' ' && char != '\n' && char != '\r' && char != '\t' {
+	//			return false
+	//		}
+	//	}
 
 	if !strings.ContainsAny(s, ".-") {
 		return false
