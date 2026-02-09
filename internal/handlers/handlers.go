@@ -46,7 +46,7 @@ func HandleUpload(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Parse error", http.StatusInternalServerError)
 	}
 
-	file, handler, err := r.FormFile("index.html")
+	file, handler, err := r.FormFile("myFile")
 	if err != nil {
 		http.Error(w, "Cannot get file", http.StatusInternalServerError)
 		return
