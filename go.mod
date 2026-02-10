@@ -1,3 +1,3 @@
-module github.com/Yandex-Practicum/go1fl-sprint6-final
+module Yp_Sprint6
 
 go 1.24.0
