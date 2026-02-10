@@ -8,7 +8,7 @@ import (
 
 func AutoDetect(input string) (string, error) {
 
-	if input == "" {
+	if len(input) == 0 {
 		return "", errors.New("Empty stroke")
 	}
 
@@ -21,15 +21,14 @@ func AutoDetect(input string) (string, error) {
 
 func isMorseCode(s string) bool {
 
-	//	allowedChars := ".- /"
+	for _, char := range s {
 
-	//	for _, char := range s {
-
-	//		if !strings.ContainsRune(allowedChars, char) &&
-	//			char != ' ' && char != '\n' && char != '\r' && char != '\t' {
-	//			return false
-	//		}
-	//	}
+		if !(char == '.' || char == '-' ||
+			char == ' ' || char == '/' ||
+			char == '\n' || char == '\r' || char == '\t') {
+			return false
+		}
+	}
 
 	if !strings.ContainsAny(s, ".-") {
 		return false
